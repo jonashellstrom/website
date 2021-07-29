@@ -10,9 +10,9 @@ export const themes: { [k in Appearance]: Theme } = {
   light: {
     breakpoints: ["40em", "52em", "64em", "80em"],
     colors: {
-      primary: "black",
+      primary: "#000",
       secondary: "#00c7bd",
-      background: "white",
+      background: "#fff",
       blue: "#007bff",
       brown: "#a2855e",
       cyan: "#32ade6",
@@ -28,14 +28,25 @@ export const themes: { [k in Appearance]: Theme } = {
       gray: "#8e8e93",
       gray2: "#aeaeb2",
       gray3: "#c7c7cc",
+      gray4: "#d1d1d6",
+      gray5: "#e5e5ea",
+      gray6: "#f2f2f7",
     },
+    fonts: {
+      sizes: {
+        title: "30px",
+        body: "14px",
+        bodySmall: "11px",
+      },
+    },
+    boxShadow: "0 3px 10px rgb(0 0 0 / 0.15)",
   },
   dark: {
     breakpoints: ["40em", "52em", "64em", "80em"],
     colors: {
-      primary: "white",
+      primary: "#fff",
       secondary: "#66d4cf",
-      background: "#000000",
+      background: "#000328",
       blue: "#0a84ff",
       brown: "#ac8f68",
       cyan: "#64d3ff",
@@ -51,6 +62,17 @@ export const themes: { [k in Appearance]: Theme } = {
       gray: "#8e8e93",
       gray2: "#636366",
       gray3: "#48484a",
+      gray4: "#3a3a3c",
+      gray5: "#2c2c2e",
+      gray6: "#1c1c1e",
     },
+    fonts: {
+      sizes: {
+        title: "30px",
+        body: "14px",
+        bodySmall: "11px",
+      },
+    },
+    boxShadow: "0 3px 10px rgb(0 0 0 / 0.15)",
   },
 }
