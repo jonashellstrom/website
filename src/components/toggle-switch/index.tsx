@@ -3,6 +3,7 @@ import React from "react"
 import "./styles.css"
 
 type ToggleSwitchProps = {
+  name: string
   isOn: boolean
   handleToggle: () => void
   colors?: [string, string]
@@ -10,7 +11,8 @@ type ToggleSwitchProps = {
 }
 
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
-  isOn = true,
+  name,
+  isOn,
   handleToggle,
   colors,
   labels,
@@ -31,13 +33,13 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
         checked={isOn}
         onChange={handleToggle}
         className="switch-checkbox"
-        id={"switch-new"}
+        id={name}
       />
 
       <label
         style={{ background: getToggleColor() }}
         className="switch-label"
-        htmlFor={"switch-new"}
+        htmlFor={name}
       >
         <span className={"switch-button"} />
         {labels && (
