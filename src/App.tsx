@@ -6,6 +6,7 @@ import { NavBar } from "./components/navbar"
 import { Appearance, themes } from "./theme"
 import { Home } from "./pages/home"
 import { About } from "./pages/about"
+import { Projects } from "./pages/projects"
 
 const App: React.FC = () => {
   const [appearance, setAppearance] = useState<Appearance>("light")
@@ -15,6 +16,9 @@ const App: React.FC = () => {
       <Router>
         <NavBar appearance={appearance} setAppearance={setAppearance} />
         <Switch>
+          <Route path="/projects">
+            <Projects />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
