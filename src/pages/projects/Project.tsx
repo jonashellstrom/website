@@ -1,6 +1,7 @@
 import React from "react"
 import { ParallaxLayer, IParallax } from "@react-spring/parallax"
 import { useTheme } from "@emotion/react"
+
 import Box from "../../components/layouts"
 import AppStoreButton from "../../assets/app_store.svg"
 import GitHubMarkLight from "../../assets/GitHub-Mark-Light-64px.png"
@@ -29,6 +30,7 @@ export const ProjectScreen: React.FC<{
       parallaxRef.current.scrollTo(to)
     }
   }
+
   const handleOnClick = () => scroll(index === maxIndex ? 0 : index + 1)
 
   return (
@@ -160,6 +162,7 @@ export const ProjectScreen: React.FC<{
           >
             {project.tech.map((tech, idx) => (
               <Label
+                key={idx}
                 style={{
                   marginRight: idx === project.tech.length - 1 ? 0 : "10px",
                 }}
@@ -229,7 +232,7 @@ export const ProjectScreen: React.FC<{
               height: "50px",
               width: "50px",
               backgroundColor: theme.colors.gray,
-              color: theme.colors.gray6,
+              color: "#fff",
               fontSize: theme.fonts.sizes.bodySmall,
               borderRadius: "100%",
               fontWeight: "bold",

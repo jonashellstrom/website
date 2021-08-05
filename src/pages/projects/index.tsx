@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
         pages={projects.length}
         horizontal
         style={{
-          backgroundImage: `linear-gradient(${theme.colors.gray6}, ${theme.colors.background})`,
+          backgroundColor: theme.colors.background,
         }}
       >
         <ParallaxLayer
@@ -35,6 +35,7 @@ const Projects: React.FC = () => {
         />
         {projects.map((project, index) => (
           <ProjectScreen
+            key={index}
             project={project}
             parallaxRef={parallaxRef}
             index={index}

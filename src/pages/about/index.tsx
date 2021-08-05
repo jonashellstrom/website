@@ -1,11 +1,11 @@
 import React from "react"
 import { BaseScreen } from "../../components/layouts"
-import { PrimaryText } from "../../components/text"
+import { Box } from "rebass"
 
 const About: React.FC = () => {
   return (
     <BaseScreen>
-      <PrimaryText>About</PrimaryText>
+      <Box>TBD</Box>
     </BaseScreen>
   )
 }

@@ -16,10 +16,6 @@ const NAVBAR_ITEMS: Array<{ linkTo: string; title: string }> = [
     linkTo: "/projects",
     title: "Projects",
   },
-  {
-    linkTo: "/about",
-    title: "About",
-  },
 ]
 
 type NavBarProps = {
