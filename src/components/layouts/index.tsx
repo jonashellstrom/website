@@ -8,6 +8,7 @@ export const BaseScreen = styled.div(({ theme }) => ({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  cursor: "default",
 }))
 
 const Box = styled.div(
