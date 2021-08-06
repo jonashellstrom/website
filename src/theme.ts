@@ -2,11 +2,12 @@ import { Theme } from "@emotion/react"
 
 export type Appearance = "light" | "dark"
 
-const breakpoints: Theme["breakpoints"] = ["40em", "52em", "64em", "80em"]
+const breakpoints: Theme["breakpoints"] = ["375px", "768px", "1024px"]
 
 const fonts: Theme["fonts"] = {
   sizes: {
     title: "30px",
+    titleMobile: "24px",
     body: "14px",
     bodySmall: "11px",
   },

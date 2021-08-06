@@ -3,7 +3,7 @@ import { Project } from "./Project"
 export const projects: Project[] = [
   {
     title: "Serverless Pizza",
-    tech: ["AWS Serverless", "Step Functions", "TypeScript"],
+    tech: ["AWS Serverless", "Step Functions"],
     description:
       "A pizza order orchestrator using Step Functions and DynamoDB.",
     imageUrl:

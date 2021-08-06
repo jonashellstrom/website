@@ -18,7 +18,14 @@ const Home: React.FC = () => {
           width: "300px",
         }}
       >
-        <Image src={MemojiStack} alt="My Memoji" style={{ width: "280px" }} />
+        <Image
+          src={MemojiStack}
+          alt="My Memoji"
+          sx={{
+            width: ["230px", "280px"],
+            marginTop: ["20px", null],
+          }}
+        />
       </Box>
       <Box
         sx={{
@@ -26,6 +33,7 @@ const Home: React.FC = () => {
           flexDirection: ["column", "row"],
           width: ["300px", "600px"],
           marginTop: "30px",
+          marginBottom: "50px",
           lineHeight: "18pt",
           color: theme.colors.primary,
         }}
@@ -52,8 +60,20 @@ const Home: React.FC = () => {
           <br />
           <br />
           {
-            "I have a background in finance and discovered my passion for programming writing macros for Excel. I completed a fullstack bootcamp a couple of years ago and I've been coding pretty non-stop ever since (I even built a time management app so that I wouldn't lose track of time coding – check it out under my projects page)."
+            "I have a background in finance and discovered my passion for programming writing macros for Excel. I completed a fullstack bootcamp a couple of years ago and I've been coding pretty non-stop ever since (I even built a time management app so that I wouldn't lose track of time coding – check it out under my projects page)\n\nThe code for this website can be found on the "
           }
+          <a
+            href="https://github.com/jonashellstrom/website"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              textDecoration: "none",
+              color: theme.colors.orange,
+              fontWeight: "bold",
+            }}
+          >
+            Website Repo
+          </a>
         </Box>
       </Box>
     </BaseScreen>

@@ -60,9 +60,31 @@ export const NavBar: React.FC<NavBarProps> = ({
             fontWeight: "bold",
           }}
         >
-          <p style={{ fontWeight: "lighter" }}>
-            JONAS HELLSTROM - FULLSTACK DEVELOPER
-          </p>
+          <Box
+            sx={{
+              display: ["none", "flex"],
+            }}
+          >
+            <p style={{ fontWeight: "lighter" }}>
+              JONAS HELLSTROM - FULLSTACK DEVELOPER
+            </p>
+          </Box>
+          <Box
+            sx={{
+              display: ["flex", "none"],
+            }}
+          >
+            <Box
+              sx={{
+                fontWeight: "lighter",
+                fontSize: theme.fonts.sizes.bodySmall,
+                whiteSpace: "pre-wrap",
+                paddingY: "10px",
+              }}
+            >
+              {`JONAS HELLSTROM\nFULLSTACK DEVELOPER`}
+            </Box>
+          </Box>
           <GitHubLink appearance={appearance} />
         </Box>
         <Box

@@ -1,8 +1,8 @@
 import React from "react"
 import { ParallaxLayer, IParallax } from "@react-spring/parallax"
 import { useTheme } from "@emotion/react"
+import { Box, Image } from "rebass"
 
-import Box from "../../components/layouts"
 import AppStoreButton from "../../assets/app_store.svg"
 import GitHubMarkLight from "../../assets/GitHub-Mark-Light-64px.png"
 import { Button } from "../../components/button"
@@ -43,8 +43,8 @@ export const ProjectScreen: React.FC<{
         }}
         onClick={handleOnClick}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "row",
             height: "100%",
@@ -54,10 +54,12 @@ export const ProjectScreen: React.FC<{
             alignItems: "flex-start",
             justifyContent: "center",
             color: theme.colors.primary,
+            marginTop: ["20px", null],
+            paddingX: ["15px", null],
           }}
         >
-          <div
-            style={{
+          <Box
+            sx={{
               height: "100px",
               width: "400px",
               display: "flex",
@@ -66,19 +68,22 @@ export const ProjectScreen: React.FC<{
               justifyContent: "space-between",
             }}
           >
-            <div
+            <Box
               style={{
                 display: "flex",
                 flexDirection: "column",
               }}
             >
               <Box
-                style={{
+                sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
                   fontWeight: "bold",
-                  fontSize: theme.fonts.sizes.title,
+                  fontSize: [
+                    theme.fonts.sizes.titleMobile,
+                    theme.fonts.sizes.title,
+                  ],
                 }}
               >
                 <p style={{ textShadow: theme.boxShadow }}>{project.title}</p>
@@ -92,8 +97,8 @@ export const ProjectScreen: React.FC<{
                   boxShadow: theme.boxShadow,
                 }}
               />
-            </div>
-            <div
+            </Box>
+            <Box
               style={{
                 marginTop: "30px",
               }}
@@ -134,14 +139,14 @@ export const ProjectScreen: React.FC<{
                   </Button>
                 </a>
               )}
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Box>
+        </Box>
       </ParallaxLayer>
 
       <ParallaxLayer offset={index} speed={0.5} onClick={handleOnClick}>
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             height: "100%",
             width: "100%",
@@ -150,14 +155,16 @@ export const ProjectScreen: React.FC<{
             alignItems: "flex-start",
             justifyContent: "center",
             color: theme.colors.primary,
+            marginTop: ["20px", null],
           }}
         >
-          <div
-            style={{
+          <Box
+            sx={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-start",
               width: "400px",
+              paddingX: ["15px", null],
             }}
           >
             {project.tech.map((tech, idx) => (
@@ -170,13 +177,13 @@ export const ProjectScreen: React.FC<{
                 {tech.toUpperCase()}
               </Label>
             ))}
-          </div>
-        </div>
+          </Box>
+        </Box>
       </ParallaxLayer>
 
       <ParallaxLayer offset={index} speed={0.8} onClick={handleOnClick}>
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "row",
             height: "100%",
@@ -185,43 +192,44 @@ export const ProjectScreen: React.FC<{
             top: "270px",
             alignItems: "flex-start",
             justifyContent: "center",
+            marginTop: ["20px", null],
           }}
         >
-          <div>
-            <img
+          <Box>
+            <Image
               src={project.imageUrl}
-              style={{
-                maxHeight: "300px",
+              sx={{
+                maxHeight: ["230px", "300px"],
               }}
               alt="Project Preview"
             />
-          </div>
-        </div>
+          </Box>
+        </Box>
       </ParallaxLayer>
 
       <ParallaxLayer offset={index} speed={1.2} onClick={handleOnClick}>
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
             height: "100%",
             width: "100%",
             position: "fixed",
-            top: "600px",
+            top: ["550px", "600px"],
             justifyContent: "flex-start",
             alignItems: "center",
           }}
         >
-          <div
-            style={{
+          <Box
+            sx={{
               color: theme.colors.primary,
               height: "70px",
-              width: "400px",
-              marginBottom: "20px",
+              width: ["280px", "400px"],
+              marginBottom: ["40px", "20px"],
             }}
           >
-            <span>{project.description}</span>
-          </div>
+            <p>{project.description}</p>
+          </Box>
           <Box
             style={{
               display: "flex",
@@ -240,7 +248,7 @@ export const ProjectScreen: React.FC<{
           >
             <p>NEXT</p>
           </Box>
-        </div>
+        </Box>
       </ParallaxLayer>
     </>
   )

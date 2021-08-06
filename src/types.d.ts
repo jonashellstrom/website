@@ -29,6 +29,7 @@ declare module "@emotion/react" {
     fonts: {
       sizes: {
         title: string
+        titleMobile: string
         body: string
         bodySmall: string
       }
