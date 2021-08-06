@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react"
+import React, { useRef } from "react"
 import { Parallax, IParallax, ParallaxLayer } from "@react-spring/parallax"
 import { useTheme } from "@emotion/react"
-import Box from "../../components/layouts"
-import MotionSwitch from "../../components/toggle-switch"
+
 import { ProjectScreen } from "./Project"
 import { projects } from "./data"
+// import MotionSwitch from "../../components/toggle-switch"
 
 const Projects: React.FC = () => {
   const parallaxRef = useRef<IParallax>(null!)
-  const [reducedMotion, setReducedMotion] = useState(false)
+  // const [reducedMotion, setReducedMotion] = useState(false)
 
   const theme = useTheme()
 
@@ -27,9 +27,8 @@ const Projects: React.FC = () => {
           speed={0}
           factor={projects.length}
           style={{
-            // backgroundImage: "url(TBD)",
             backgroundSize: "cover",
-            opacity: 0.03,
+            opacity: 0.1,
             backgroundColor: theme.colors.gray3,
           }}
         />
@@ -43,7 +42,7 @@ const Projects: React.FC = () => {
           />
         ))}
       </Parallax>
-      <Box
+      {/* <Box
         style={{
           position: "fixed",
           right: "15px",
@@ -65,7 +64,7 @@ const Projects: React.FC = () => {
           isOn={reducedMotion}
           handleToggle={() => setReducedMotion(!reducedMotion)}
         />
-      </Box>
+      </Box> */}
     </>
   )
 }

@@ -192,9 +192,8 @@ export const ProjectScreen: React.FC<{
               src={project.imageUrl}
               style={{
                 maxHeight: "300px",
-                boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
               }}
-              alt="Project Screenshot"
+              alt="Project Preview"
             />
           </div>
         </div>
