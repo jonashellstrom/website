@@ -2,13 +2,24 @@ import { Theme } from "@emotion/react"
 
 export type Appearance = "light" | "dark"
 
+const breakpoints: Theme["breakpoints"] = ["40em", "52em", "64em", "80em"]
+
+const fonts: Theme["fonts"] = {
+  sizes: {
+    title: "30px",
+    body: "14px",
+    bodySmall: "11px",
+  },
+}
+
 /**
- * Named colors are based on Apple's Human Interface Guidelines
+ * Colors are unique to light and dark appearances and
+ * are based on Apple's Human Interface Guidelines
  * https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
  */
 export const themes: { [k in Appearance]: Theme } = {
   light: {
-    breakpoints: ["40em", "52em", "64em", "80em"],
+    breakpoints,
     colors: {
       primary: "#000",
       secondary: "#00c7bd",
@@ -32,17 +43,11 @@ export const themes: { [k in Appearance]: Theme } = {
       gray5: "#e5e5ea",
       gray6: "#f2f2f7",
     },
-    fonts: {
-      sizes: {
-        title: "30px",
-        body: "14px",
-        bodySmall: "11px",
-      },
-    },
+    fonts,
     boxShadow: "0 3px 10px rgb(0 0 0 / 0.15)",
   },
   dark: {
-    breakpoints: ["40em", "52em", "64em", "80em"],
+    breakpoints,
     colors: {
       primary: "#fff",
       secondary: "#66d4cf",
@@ -66,13 +71,7 @@ export const themes: { [k in Appearance]: Theme } = {
       gray5: "#2c2c2e",
       gray6: "#1c1c1e",
     },
-    fonts: {
-      sizes: {
-        title: "30px",
-        body: "14px",
-        bodySmall: "11px",
-      },
-    },
+    fonts,
     boxShadow: "0 3px 10px rgb(0 0 0 / 0.15)",
   },
 }

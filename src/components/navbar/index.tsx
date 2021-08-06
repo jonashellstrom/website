@@ -78,7 +78,7 @@ export const NavBar: React.FC<NavBarProps> = ({
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
-              width: ["400px"],
+              width: ["200px"],
             }}
           >
             {NAVBAR_ITEMS.map((item) => (

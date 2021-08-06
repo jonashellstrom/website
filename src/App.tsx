@@ -9,7 +9,7 @@ import { About } from "./pages/about"
 import { Projects } from "./pages/projects"
 
 const App: React.FC = () => {
-  const [appearance, setAppearance] = useState<Appearance>("light")
+  const [appearance, setAppearance] = useState<Appearance>("dark")
 
   return (
     <ThemeProvider theme={themes[appearance]}>
