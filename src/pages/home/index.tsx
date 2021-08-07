@@ -46,7 +46,7 @@ const Home: React.FC = () => {
           }}
         >
           {
-            "Hi, I'm Jonas!\n\nI'm is a fullstack developer based in Toronto. I love working with AWS and the Serverless Framework to build microservices, Django to build web APIs as well as with React and Redux to build nice-looking web and mobile apps. I've worked with both GraphQL and REST APIs, with SQL as well as with non-relational databases like DynamoDB.\n\nRecently, I've really enjoyed building for iOS with Swift and SwiftUI."
+            "Hi, I'm Jonas!\n\nI'm a full stack developer based in Toronto. I love working with AWS and the Serverless Framework to build microservices, Django to build web APIs as well as with React and Redux to build nice-looking web and mobile apps. I've worked with both GraphQL and REST APIs, with SQL as well as with non-relational databases like DynamoDB.\n\nRecently, I've really enjoyed building for iOS with Swift and SwiftUI."
           }
         </Box>
         <Box
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           <br />
           <br />
           {
-            "I have a background in finance and discovered my passion for programming writing macros for Excel. I completed a fullstack bootcamp a couple of years ago and I've been coding pretty non-stop ever since (I even built a time management app so that I wouldn't lose track of time coding – check it out under my projects page)\n\nThe code for this website can be found on the "
+            "I have a background in finance and discovered my passion for programming writing macros for Excel. I completed a full stack bootcamp a couple of years ago and I've been coding pretty non-stop ever since (I even built a time management app so that I wouldn't lose track of time coding – check it out under my projects page)\n\nThe code for this website can be found on the "
           }
           <a
             href="https://github.com/jonashellstrom/website"

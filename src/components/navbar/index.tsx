@@ -66,7 +66,7 @@ export const NavBar: React.FC<NavBarProps> = ({
             }}
           >
             <p style={{ fontWeight: "lighter" }}>
-              JONAS HELLSTROM - FULLSTACK DEVELOPER
+              JONAS HELLSTROM - FULL STACK DEVELOPER
             </p>
           </Box>
           <Box
@@ -82,7 +82,7 @@ export const NavBar: React.FC<NavBarProps> = ({
                 paddingY: "10px",
               }}
             >
-              {`JONAS HELLSTROM\nFULLSTACK DEVELOPER`}
+              {`JONAS HELLSTROM\nFULL STACK DEVELOPER`}
             </Box>
           </Box>
           <GitHubLink appearance={appearance} />
